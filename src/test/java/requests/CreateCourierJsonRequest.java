@@ -1,11 +1,11 @@
 package requests;
 
-public class CreateCourierJson {
+public class CreateCourierJsonRequest {
     String login;
     String password;
     String firstName;
 
-    public CreateCourierJson() {
+    public CreateCourierJsonRequest() {
 
     }
 
@@ -33,27 +33,27 @@ public class CreateCourierJson {
         this.firstName = firstName;
     }
 
-    public CreateCourierJson(String login, String password, String firstName) {
+    public CreateCourierJsonRequest(String login, String password, String firstName) {
         this.login = login;
         this.password = password;
         this.firstName = firstName;
     }
-    public CreateCourierJson withoutLogin(String password, String firstName){
-        CreateCourierJson jsonBody = new CreateCourierJson();
+    public static CreateCourierJsonRequest withoutLogin(String password, String firstName){
+        CreateCourierJsonRequest jsonBody = new CreateCourierJsonRequest();
         jsonBody.password = password;
         jsonBody.firstName=firstName;
         return jsonBody;
     }
 
-    public CreateCourierJson withoutPassword(String login, String firstName){
-        CreateCourierJson jsonBody = new CreateCourierJson();
+    public static CreateCourierJsonRequest withoutPassword(String login, String firstName){
+        CreateCourierJsonRequest jsonBody = new CreateCourierJsonRequest();
         jsonBody.login = login;
         jsonBody.firstName=firstName;
         return jsonBody;
     }
 
-    public CreateCourierJson withoutFirstName(String login, String password){
-        CreateCourierJson jsonBody = new CreateCourierJson();
+    public static CreateCourierJsonRequest withoutFirstName(String login, String password){
+        CreateCourierJsonRequest jsonBody = new CreateCourierJsonRequest();
         jsonBody.login = login;
         jsonBody.password=password;
         return jsonBody;

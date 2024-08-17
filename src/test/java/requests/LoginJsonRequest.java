@@ -1,6 +1,6 @@
 package requests;
 
-public class LoginJson {
+public class LoginJsonRequest {
 
     String login;
     String password;
@@ -9,23 +9,23 @@ public class LoginJson {
         return login;
     }
 
-    public LoginJson() {
+    public LoginJsonRequest() {
     }
 
 
-    public LoginJson(String login, String password) {
+    public LoginJsonRequest(String login, String password) {
         this.login = login;
         this.password = password;
     }
 
-    public LoginJson withoutLogin(String password){
-        LoginJson jsonBody = new LoginJson();
+    public static LoginJsonRequest withoutLogin(String password){
+        LoginJsonRequest jsonBody = new LoginJsonRequest();
         jsonBody.password = password;
         return jsonBody;
     }
 
-    public LoginJson withoutPassword(String login){
-        LoginJson jsonBody = new LoginJson();
+    public static LoginJsonRequest withoutPassword(String login){
+        LoginJsonRequest jsonBody = new LoginJsonRequest();
         jsonBody.login = login;
         return jsonBody;
     }
