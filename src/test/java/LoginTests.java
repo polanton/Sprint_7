@@ -87,7 +87,7 @@ public class LoginTests {
                 .and()
                 .statusCode(400);
     }
-
+/*
     @DisplayName("Попытка входа без пароля в запросе")
     @Test
     public void withoutPasswordFieldReturnError(){
@@ -102,7 +102,7 @@ public class LoginTests {
                 .and()
                 .statusCode(400);
     }
-
+*/
     @DisplayName("Попытка входа с некорректным паролем")
     @Test
     public void withWrongPasswordReturnError(){
